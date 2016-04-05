@@ -1,0 +1,35 @@
+{
+  "name": "jsmodbus-tools",
+  "version": "0.1.0",
+  "description": "Some tools to work with the jsmodbus module.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cloud-automation/node-modbus-tools.git"
+  },
+  "keywords": [
+    "modbus",
+    "jsmodbus",
+    "tools",
+    "tcp",
+    "server",
+    "client",
+    "serial",
+    "automation"
+  ],
+  "author": "Stefan Pöter <stefan.poeter@cloud-automation.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cloud-automation/node-modbus-tools/issues"
+  },
+  "homepage": "https://github.com/cloud-automation/node-modbus-tools#readme",
+  "dependencies": {
+    "js-range-list": "^0.1.0",
+    "jsmodbus": "^1.0.2",
+    "q": "^1.4.1",
+    "stampit": "^2.1.1"
+  }
+}
