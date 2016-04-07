@@ -1,6 +1,6 @@
 {
   "name": "jsmodbus-tools",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Some tools to work with the jsmodbus module.",
   "main": "src/index.js",
   "scripts": {
@@ -28,7 +28,7 @@
   "homepage": "https://github.com/cloud-automation/node-modbus-tools#readme",
   "dependencies": {
     "js-range-list": "^0.1.0",
-    "jsmodbus": "^1.0.2",
+    "jsmodbus": "^1.0.3",
     "q": "^1.4.1",
     "stampit": "^2.1.1"
   }

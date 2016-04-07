@@ -6,7 +6,8 @@ var loop = Loop({
     'port'          : process.argv[3],
     'loopDuration'  : 100,
     'logEnabled'    : true,
-    'logLevel'      : 'info'
+    'logLevel'      : 'info',
+    'logTimestamp'  : true
 });
 
 loop.loopHoldingRegisters(0, 20)
