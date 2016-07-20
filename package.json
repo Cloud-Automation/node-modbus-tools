@@ -1,6 +1,6 @@
 {
   "name": "jsmodbus-tools",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Some tools to work with the jsmodbus module.",
   "main": "src/index.js",
   "scripts": {
