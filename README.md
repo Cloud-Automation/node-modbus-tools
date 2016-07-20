@@ -44,7 +44,7 @@ Poll certain registers periodically.
         // if the loop took longer than the
         // loopDuration value then diffTime will be 0
 
-        // Change in Version 1.0.3!! regs are now Buffers!
+        // Change in Version 0.1.3!! regs are now Buffers!
         
         }); 
 
