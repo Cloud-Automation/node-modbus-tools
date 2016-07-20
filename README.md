@@ -16,24 +16,25 @@ Poll certain registers periodically.
     // with some extra parameters
 
     client = loop({
-        'host'  : someHost,
-        'port'  : somePort,
-        'loopDuration' : 500 // in ms
+        'host'          : someHost,
+        'port'          : somePort,
+        'loopDuration'  : 500, // in ms
+        'bufferSize'    : 4096 // in bytes
         });
 
     // loopHoldingRegisters registers the
     // start and count values to be polled
     
-    loop.loopHoldingRegisters(start, count);
+    client.loopHoldingRegisters(start, count);
     
 
     // connects the client as usual and starts
     // the loop as soon as the connection
     // is established
 
-    loop.connect();
+    client.connect();
     
-    loop.on('loopUpdate', function (regs, diffTime) {
+    client.on('loopUpdate', function (regs, diffTime) {
         
         // in the registers you can get the requested values
         // in the loopHoldingRegister call earlier
@@ -42,6 +43,8 @@ Poll certain registers periodically.
         // time is left till the next loop
         // if the loop took longer than the
         // loopDuration value then diffTime will be 0
+
+        // Change in Version 1.0.3!! regs are now Buffers!
         
         }); 
 
@@ -49,7 +52,7 @@ Poll certain registers periodically.
 
         // stop the loop manually
 
-        loop.stopLoop();
+        client.stopLoop();
 
     }, 10000);
 
@@ -57,7 +60,7 @@ Poll certain registers periodically.
     
         // start the loop manually
 
-        loop.startLoop();    
+        client.startLoop();    
         
     }, 15000)
 

@@ -5,7 +5,7 @@ var stampit     = require('stampit'),
 module.exports = stampit()
     .init(function () {
 
-        var localRegisters  = [],
+        var localRegisters  = null,
             timeoutId       = null,
             running         = false;
 
@@ -14,6 +14,9 @@ module.exports = stampit()
             this.log.info('Initiating Loop.');
 
             if (!this.loopDuration) this.loopDuration = 0;
+            if (!this.bufferSize) this.bufferSize = 4096;
+
+            localRegisters = new Buffer(this.bufferSize);
             
             requests = RangeList({ max : this.max });
 
@@ -85,7 +88,7 @@ module.exports = stampit()
 
                 resp.register.forEach(function (r, i) {
 
-                    localRegisters[i + start] = r;                
+                    localRegisters.writeUInt16BE(start + 2, r);
                 
                 });
         

@@ -23,6 +23,7 @@ loop.on('connect', function () {
 loop.on('loopUpdate', function (regs, time) {
 
     console.log('LOOP Update', time);
+    console.log('Value', regs.readUInt16BE(0));
 
 });
 
