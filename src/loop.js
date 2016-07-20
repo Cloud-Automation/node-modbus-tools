@@ -88,7 +88,7 @@ module.exports = stampit()
 
                 resp.register.forEach(function (r, i) {
 
-                    localRegisters.writeUInt16BE(start + 2, r);
+                    localRegisters.writeUInt16BE(r, (start + i) * 2);
                 
                 });
         
